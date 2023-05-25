@@ -35,7 +35,11 @@ footer {
 }
 
 
-.servicios {
+.contacto a.btn {
+    text-align: right;
+}
+
+.servicios, .ventas, .alquileres {
     text-align: center;
 }
 
@@ -44,6 +48,11 @@ footer {
     h2, a {
         text-align: center;
     }
+}
+
+.difuminada {
+    filter: blur(1.5px) brightness(0.88);
+    border-radius: 10px;
 }
 
 @media (max-width: 767px) {
