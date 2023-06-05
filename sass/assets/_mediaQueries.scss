@@ -1,0 +1,14 @@
+@media (max-width: 767px) {
+    .alquileres article, .ventas article {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .alquileres article {
+        text-align: right;
+    }
+    .ventas article {
+        text-align: left;
+    }
+}

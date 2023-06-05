@@ -1,0 +1,15 @@
+@use './header';
+
+.border-top-left-radius {
+    border-radius: 0px;
+    border-top-left-radius: 15px;
+}
+
+.card {
+    @extend .border-top-left-radius;
+    @extend .box-shadow;
+    border-bottom-right-radius: 15px;
+    img {
+        @extend .border-top-left-radius;
+    }
+}
