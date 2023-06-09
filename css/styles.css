@@ -1,19 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
-/*$colorFuente: #0D160B;
-$colorNavbar: #B6DCFE;
-$colorFooter: #93A3B1;*/
-/*$colorFuente: #36393B;
-$colorNavbar: #A5D8FF;
-$colorFooter: #AFD0D6;*/
 h1, h2, h3, h4, h5, h6 {
   color: #0E0E52;
   font-family: "Dancing Script", cursive;
 }
 
 .box-shadow, .card, .navbar {
-  -webkit-box-shadow: 0px 4px 6px 0px rgb(207, 207, 207);
-  -moz-box-shadow: 0px 4px 6px 0px rgb(207, 207, 207);
-  box-shadow: 0px 4px 6px 0px rgb(207, 207, 207);
+  -webkit-box-shadow: 0px 4px 6px 0px #cfcfcf;
+  -moz-box-shadow: 0px 4px 6px 0px #cfcfcf;
+  box-shadow: 0px 4px 6px 0px #cfcfcf;
 }
 
 .navbar {
@@ -38,18 +32,6 @@ footer {
     text-align: left;
   }
 }
-/*.btn-outline-secondary {
-    border-bottom-width: 4px;
-    border-bottom-color: var.$colorFuente;
-    &:hover {
-        border-bottom-color: var.$colorFuente;
-    }
-    &:active {
-        border-bottom: 0px;
-        margin-top: 4px;
-    }
-}*/
-/* CSS */
 .btn-white {
   align-items: center;
   background-color: #FCFCFD;
@@ -76,6 +58,43 @@ footer {
 }
 .btn-white:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/*
+#5adaff
+#5468ff
+*/
+.btn-blue {
+  color: white;
+  align-items: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #78C0E0 0, #449DD1 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3019607843) 0 7px 13px -3px, rgba(58, 65, 111, 0.5019607843) 0 -3px 0 inset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.btn-blue:focus {
+  box-shadow: #78C0E0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3019607843) 0 7px 13px -3px, #78C0E0 0 -3px 0 inset;
+}
+.btn-blue:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3019607843) 0 7px 13px -3px, #0E0E52 0 -3px 0 inset;
+}
+.btn-blue:active {
+  box-shadow: #78C0E0 0 3px 7px inset;
   transform: translateY(2px);
 }
 
