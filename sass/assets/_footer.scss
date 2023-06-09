@@ -1,3 +1,5 @@
+@use './var';
+
 footer {
-    background-color: #93A3B1;
+    background-color: var.$colorFooter;
 }
