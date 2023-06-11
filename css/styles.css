@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 /* para que ocupe siempre el 100% del height */
 html, body {
@@ -14,30 +15,9 @@ body main {
   flex: 1;
 }
 
-.animationFadeForward {
-  animation: fadeForward 1s ease 0s 1 normal forwards;
-}
-
-@keyframes fadeForward {
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.animationSlideRight {
+/* aca me rompí la cabeza pero esto es magia!!! */
+.slideRight {
   animation: slideRight 2s ease 0s 1 normal forwards;
-}
-
-.animationSlideLeft {
-  animation: slideLeft 2s ease 0s 1 normal forwards;
-}
-
-.animationSlideBottom {
-  animation: slideBottom 2s ease 0s 1 normal forwards;
 }
 
 @keyframes slideRight {
@@ -50,6 +30,10 @@ body main {
     transform: translateX(0);
   }
 }
+.slideLeft {
+  animation: slideLeft 2s ease 0s 1 normal forwards;
+}
+
 @keyframes slideLeft {
   0% {
     opacity: 0;
@@ -60,6 +44,10 @@ body main {
     transform: translateX(0);
   }
 }
+.slideBottom {
+  animation: slideBottom 2s ease 0s 1 normal forwards;
+}
+
 @keyframes slideBottom {
   0% {
     opacity: 0;
@@ -68,6 +56,20 @@ body main {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.fadeForward {
+  animation: fadeForward 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeForward {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 .animationPulseHeartbeat, .btn-blue:hover {

@@ -1,66 +1,30 @@
-.animationFadeForward {
-    animation: fadeForward 1s ease 0s 1 normal forwards;
-}
-
-@keyframes fadeForward {
-	0% {
-		opacity: 0;
-		transform: scale(0.6);
+/* aca me rompí la cabeza pero esto es magia!!! */
+@mixin animation($name, $transform, $duration, $value1, $value2) {
+	.#{$name} {
+		animation: #{$name} #{$duration} ease 0s 1 normal forwards;
 	}
 
-	100% {
-		opacity: 1;
-		transform: scale(1);
+	@keyframes #{$name} {
+		0% {
+			opacity: 0;
+			transform: #{$transform}($value1);
+		}
+	
+		100% {
+			opacity: 1;
+			transform: #{$transform}($value2);
+		}
 	}
+	
 }
 
-.animationSlideRight {
-    animation: slideRight 2s ease 0s 1 normal forwards;
-}
+@include animation(slideRight, translateX, 2s, 250px, 0);
 
-.animationSlideLeft {
-    animation: slideLeft 2s ease 0s 1 normal forwards;
-}
+@include animation(slideLeft, translateX, 2s, -250px, 0);
 
-.animationSlideBottom {
-    animation: slideBottom 2s ease 0s 1 normal forwards;
-}
+@include animation(slideBottom, translateY, 2s, 250px, 0);
 
-@keyframes slideRight {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes slideLeft {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes slideBottom {
-	0% {
-		opacity: 0;
-		transform: translateY(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
+@include animation(fadeForward, scale, 1s, 0.6, 1);
 
 .animationPulseHeartbeat {
     animation: pulseHeartbeat 1s ease 0s 1 normal forwards;
