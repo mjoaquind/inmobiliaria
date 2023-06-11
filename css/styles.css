@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 /* para que ocupe siempre el 100% del height */
 html, body {
   height: 100%;
@@ -70,9 +70,36 @@ body main {
     transform: translateY(0);
   }
 }
+.animationPulseHeartbeat, .btn-blue:hover {
+  animation: pulseHeartbeat 1s ease 0s 1 normal forwards;
+}
+
+@keyframes pulseHeartbeat {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   color: #0E0E52;
-  font-family: "Dancing Script", cursive;
+  font-family: "Courgette", cursive;
 }
 
 /* para que no quede oculto el h1 por el mavbar fixed top */
@@ -164,7 +191,7 @@ footer {
 .nosotros {
   text-align: justify;
 }
-.nosotros h2, .nosotros a {
+.nosotros a {
   text-align: center;
 }
 

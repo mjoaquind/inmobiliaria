@@ -1,4 +1,5 @@
 @use './var';
+@use './animations';
 
 .btn-blue {
     color: white;
@@ -26,6 +27,7 @@
     }
     &:hover {
         box-shadow: #2d234266 0 4px 8px, #2d23424d 0 7px 13px -3px, var.$azulOscuro 0 -3px 0 inset;
+        @extend .animationPulseHeartbeat;
     }
     &:active {
         box-shadow: var.$celesteClaro 0 3px 7px inset;
