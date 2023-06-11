@@ -1,4 +1,4 @@
-/* aca me rompí la cabeza pero esto es magia!!! */
+/* acá me rompí la cabeza pero esto es magia!!! */
 @mixin animation($name, $transform, $duration, $value1, $value2) {
 	.#{$name} {
 		animation: #{$name} #{$duration} ease 0s 1 normal forwards;
