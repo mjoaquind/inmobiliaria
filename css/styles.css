@@ -1,7 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+/* para que ocupe siempre el 100% del height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  flex: 1;
+}
+
+.animationFadeForward {
+  animation: fadeForward 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeForward {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animationSlideRight {
+  animation: slideRight 2s ease 0s 1 normal forwards;
+}
+
+.animationSlideLeft {
+  animation: slideLeft 2s ease 0s 1 normal forwards;
+}
+
+.animationSlideBottom {
+  animation: slideBottom 2s ease 0s 1 normal forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   color: #0E0E52;
   font-family: "Dancing Script", cursive;
+}
+
+/* para que no quede oculto el h1 por el mavbar fixed top */
+header {
+  margin-top: 70px;
 }
 
 .box-shadow, .card, .navbar {
@@ -20,51 +96,18 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .alquileres article, .ventas article {
+  .alquileresIndex article, .ventasIndex article {
     text-align: center;
   }
 }
 @media (min-width: 768px) {
-  .alquileres article {
+  .alquileresIndex article {
     text-align: right;
   }
-  .ventas article {
+  .ventasIndex article {
     text-align: left;
   }
 }
-.btn-white {
-  align-items: center;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  color: #0E0E52;
-  display: inline-flex;
-  height: 48px;
-  line-height: 1;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  transition: box-shadow 0.15s, transform 0.15s;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-}
-.btn-white:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-.btn-white:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-.btn-white:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
-/*
-#5adaff
-#5468ff
-*/
 .btn-blue {
   color: white;
   align-items: center;
@@ -98,30 +141,23 @@ footer {
   transform: translateY(2px);
 }
 
-.border-top-left-radius, .card img, .card {
-  border-radius: 0px;
-  border-top-left-radius: 15px;
-}
-
 .card {
-  border-bottom-right-radius: 15px;
+  border-radius: 50px 0px;
+  text-align: center;
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.card img {
+  border-radius: 50px 0px 0px 0px;
 }
-
-body {
-  margin: 70px;
-  display: flex;
-  flex-direction: column;
+.card:hover {
+  transition: border-radius 1s;
+  border-radius: 0px 50px;
 }
-body main {
-  flex: 1;
+.card:hover img {
+  transition: border-radius 1s;
+  border-radius: 0px 50px 0px 0px;
 }
 
-.servicios, .ventas, .alquileres {
+.serviciosIndex {
   text-align: center;
 }
 

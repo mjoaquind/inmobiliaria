@@ -1,15 +1,18 @@
 @use './header';
 
-.border-top-left-radius {
-    border-radius: 0px;
-    border-top-left-radius: 15px;
-}
-
 .card {
-    @extend .border-top-left-radius;
+    border-radius: 50px 0px;
     @extend .box-shadow;
-    border-bottom-right-radius: 15px;
+    text-align: center;
     img {
-        @extend .border-top-left-radius;
+        border-radius: 50px 0px 0px 0px;
+    }
+    &:hover {
+        transition: border-radius 1s;
+        border-radius: 0px 50px;
+        img {
+            transition: border-radius 1s;
+            border-radius: 0px 50px 0px 0px;
+        }
     }
 }
