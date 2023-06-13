@@ -1,11 +1,12 @@
 /* para que ocupe siempre el 100% del height */
-html, body {
+html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
+    @extend html;
     display: flex;
     flex-direction: column;
     main {
