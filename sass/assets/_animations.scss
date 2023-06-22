@@ -15,7 +15,6 @@
 			transform: #{$transform}($value2);
 		}
 	}
-	
 }
 
 @include animation(slideRight, translateX, 2s, 250px, 0);

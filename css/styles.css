@@ -124,12 +124,12 @@ footer {
   background-color: #449DD1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .alquileresIndex article, .ventasIndex article {
     text-align: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .alquileresIndex article {
     text-align: right;
   }
